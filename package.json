@@ -1,0 +1,71 @@
+{
+    "name": "vscode-lang-e100e300",
+    "displayName": "E100/E300 (Eclipse) language",
+    "description": "Language support for Eclipse E100 and E300.",
+    "version": "0.1.2",
+    "author": "Thorbjørn Horgen",
+    "publisher": "thor85",
+    "repository": "https://github.com/equinor/vscode-lang-e100e300",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "keywords": [
+        "language",
+        "eclipse",
+        "e100",
+        "e300",
+        "highlight",
+        "syntax"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "eclipse",
+                "aliases": [
+                    "e100",
+                    "e300"
+                ],
+                "extensions": [
+                    ".data",
+                    ".include",
+                    ".grdecl",
+                    ".aqucon",
+                    ".aqunum",
+                    ".fault",
+                    ".multnum",
+                    ".multregp",
+                    ".multregt",
+                    ".nnc",
+                    ".ntg",
+                    ".opernum",
+                    ".satnum",
+                    ".eqlnum",
+                    ".fipnum",
+                    ".rocknum",
+                    ".perm",
+                    ".poro",
+                    ".pvt",
+                    ".sattab",
+                    ".dimens",
+                    ".tabdims",
+                    ".schedule",
+                    ".sch",
+                    ".equil",
+                    ".thpres",
+                    ".summary"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "eclipse",
+                "scopeName": "source.e100e300",
+                "path": "./syntaxes/e100e300.tmLanguage.json"
+            }
+        ]
+    }
+}

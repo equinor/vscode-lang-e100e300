@@ -1,0 +1,178 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "e100e300",
+	"patterns": [
+		{
+			"include": "#important"
+		},
+		{
+			"include": "#sections"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#parameters"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#entities"
+		},
+		{
+			"include": "#endcomments"
+		},
+		{
+			"include": "#defaults"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#symbols"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "markup.bold.e100e300, entity.name.function.e100e300",
+					"match": "^[A-Z][_A-Z0-9]*"
+				}
+			]
+		},
+		"entities": {
+			"patterns": [
+				{
+					"name": "entity.name.function.e100e300",
+					"match": "[A-Z0-9][._A-Z0-9]*(?=\\()"
+				}
+			]
+		},
+		"parameters": {
+			"patterns": [
+				{
+					"name": "variable.parameter.e100e300",
+					"match": "\\s[$A-Z][_A-Z0-9]*(?=\\s)"
+				}
+			]
+		},
+		"important": {
+			"patterns": [
+				{
+					"name": "markup.bold.e100e300, support.type.prope100e300y-name.json",
+					"match": "^INCLUDE"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "entity.name.type.e100e300",
+					"match": "<[A-Z][_A-Z0-9]*>"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.single.e100e300",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.e100e300",
+					"match": "\\\\."
+				}
+			]
+		},
+		"linecomments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-dash.e100e300",
+					"match": "^--.*$"
+				}
+			]
+		},
+		"endcomments": {
+			"patterns": [
+				{
+					"name": "comment.e100e300",
+					"match": "--.*$"
+				},
+				{
+					"name": "comment.e100e300",
+					"match": "(?<=/).*$"
+				}
+			]
+		},
+		"sections": {
+			"patterns": [
+				{
+					"name": "markup.bold.e100e300, keyword.e100e300, markup.underline",
+					"match": "^RUNSPEC\\s|^GRID\\s|^EDIT\\s|^PROPS\\s|^SOLUTION\\s|^REGIONS\\s|^SUMMARY\\s|^SCHEDULE\\s"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"match": "(?x)\n(?<!\\$)(?:\n  (?:\\b[0-9]+(\\.)[0-9]+[eE][+-]?[0-9]+\\b)| # 1.1E+3\n  (?:\\b[0-9]+(\\.)[eE][+-]?[0-9]+\\b)|       # 1.E+3\n  (?:\\B(\\.)[0-9]+[eE][+-]?[0-9]+\\b)|       # .1E+3\n  (?:\\b[0-9]+[eE][+-]?[0-9]+\\b)|            # 1E+3\n  (?:\\b[0-9]+(\\.)[0-9]+\\b)|                # 1.1\n  (?:\\b[0-9]+(\\.)\\B)|                      # 1.\n  (?:\\B(\\.)[0-9]+\\b)|                      # .1\n  (?:\\b[0-9]+\\b(?!\\.))                     # 1\n)(?!\\$)",
+					"captures": {
+						"0": {
+							"name": "constant.numeric.decimal.e100e300"
+						},
+						"1": {
+							"name": "meta.delimiter.decimal.period.e100e300"
+						},
+						"2": {
+							"name": "meta.delimiter.decimal.period.e100e300"
+						},
+						"3": {
+							"name": "meta.delimiter.decimal.period.e100e300"
+						},
+						"4": {
+							"name": "meta.delimiter.decimal.period.e100e300"
+						},
+						"5": {
+							"name": "meta.delimiter.decimal.period.e100e300"
+						},
+						"6": {
+							"name": "meta.delimiter.decimal.period.e100e300"
+						}
+					}
+				}
+			]
+		},
+		"defaults": {
+			"patterns": [
+				{
+					"match": "[0-9]*\\*",
+					"name": "constant.language.boolean.e100e300"
+				}
+			]
+		},
+		"symbols": {
+			"patterns": [
+				{
+					"match": "\\(|\\)|,",
+					"name": "storage.type.e100e300"
+				},
+				{
+					"match": "\/",
+					"name": "constant.language.null.e100e300"
+				},
+				{
+					"match": "=",
+					"name": "constant.language.boolean.e100e300"
+				}
+			]
+		}
+	},
+	"scopeName": "source.e100e300"
+}
