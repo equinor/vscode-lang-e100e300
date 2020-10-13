@@ -38,6 +38,7 @@
                     ".fault",
                     ".fipnum",
                     ".grdecl",
+                    ".inc",
                     ".include",
                     ".multnum",
                     ".multregp",
