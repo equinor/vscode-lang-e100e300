@@ -58,6 +58,7 @@
                     ".summary"
                     ".tabdims",
                     ".thpres",
+                    ".vfp",
                 ],
                 "configuration": "./language-configuration.json"
             }
