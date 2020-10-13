@@ -33,6 +33,7 @@
                     ".aqunum",
                     ".data",
                     ".dimens",
+                    ".ecl",
                     ".eqlnum",
                     ".equil",
                     ".fault",
