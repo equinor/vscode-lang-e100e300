@@ -56,10 +56,10 @@
                     ".sattab",
                     ".sch",
                     ".schedule",
-                    ".summary"
+                    ".summary",
                     ".tabdims",
                     ".thpres",
-                    ".vfp",
+                    ".vfp"
                 ],
                 "configuration": "./language-configuration.json"
             }
