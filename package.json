@@ -2,7 +2,7 @@
     "name": "vscode-lang-e100e300",
     "displayName": "E100/E300 (Eclipse) language",
     "description": "Language support for Eclipse E100 and E300.",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "author": "Thorbjørn Horgen",
     "publisher": "thor85",
     "repository": "https://github.com/equinor/vscode-lang-e100e300",
